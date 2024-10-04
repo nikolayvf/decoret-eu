@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DECORET DESIGN HABITAT - Контакти</title>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/contacts.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- Include EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("Ru_DCh3pQ_8uX2aBv"); // Replace "PUBLIC_KEY" with your actual EmailJS public key
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <a class="logo" href="index.html">
+          <img
+            src="resources/images/DECORET_LOGO_SMALL.png"
+            alt="DECORET DESIGN HABITAT Logo"
+          />
+        </a>
+        <ul class="menu">
+          <li><a href="index.html" class="nav-link">Начало</a></li>
+          <li class="dropdown">
+            <a href="projects.html" class="nav-link">Проекти</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="projects.html#interior" class="dropdown-link"
+                  >Интериор</a
+                >
+              </li>
+              <li>
+                <a href="projects.html#exterior" class="dropdown-link"
+                  >Екстериор</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">За нас</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакти</a></li>
+          <li><a href="blog.html" class="nav-link">Блог</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="contacts-container">
+      <div class="contact-info">
+        <h1>Свържете се с нас</h1>
+        <p>Имате въпроси? Свържете се с нас!</p>
+        <form id="contact-form" class="contact-form">
+          <div>
+            <input type="text" name="name" placeholder="Име*" required />
+          </div>
+          <div>
+            <input type="email" name="email" placeholder="Имейл*" required />
+          </div>
+          <div>
+            <input type="text" name="subject" placeholder="Тема*" required />
+          </div>
+          <div>
+            <textarea
+              name="message"
+              placeholder="Съобщение*"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <input type="submit" value="Изпрати" />
+          </div>
+        </form>
+      </div>
+      <div class="profile-picture">
+        <img src="resources/images/contacts-image.jpg" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Footer content here -->
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navbar.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contact-form");
+
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Collect form data
+          const formData = new FormData(contactForm);
+          const formValues = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            subject: formData.get("subject"),
+            message: formData.get("message"),
+          };
+
+          // Send email using EmailJS
+          emailjs.send("service_x7otrcu", "template_3cgll9l", formValues).then(
+            function (response) {
+              alert("Съобщението беше изпратено успешно!"); // Success message
+              contactForm.reset(); // Reset form after successful email
+            },
+            function (error) {
+              alert("Грешка при изпращане на съобщението: " + error.text); // Error message
+            }
+          );
+        });
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="social-media-links">
+        <a
+          href="https://www.facebook.com/DecorettDesign?locale=bg_BG"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            alt="Facebook"
+            class="icon"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/decoret_design"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+            class="icon"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            alt="LinkedIn"
+            class="icon"
+          />
+        </a>
+      </div>
+      <div class="footer-content">
+        <p>© 2024 DECORET DESIGN HABITAT. All rights reserved.</p>
+        <p>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> |
+          <a href="#">Disclaimer</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

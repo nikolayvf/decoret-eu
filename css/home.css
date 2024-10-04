@@ -1,0 +1,117 @@
+/* css/home.css */
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ensure container takes up the full viewport height */
+  overflow: hidden;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out; /* Smooth transition for visibility */
+  opacity: 0;
+}
+
+.image-container.visible {
+  opacity: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+/* Animations for specific images */
+.image01 .hero-image {
+  opacity: 1; /* Already visible */
+}
+
+.image02 .hero-image {
+  transform: translateX(100%);
+  animation: slideInFromRight 1.6s ease-in-out forwards; /* Slide from right */
+}
+
+.image03 .hero-image {
+  transform: translateY(100%);
+  animation: slideInFromBottom 2.2s ease-in-out forwards; /* Slide from bottom */
+}
+
+.image04 .hero-image {
+  transform: translateY(100%);
+  animation: slideInFromBottom 2.8s ease-in-out forwards; /* Slide from bottom */
+}
+
+.image05 .hero-image {
+  transform: translateY(100%);
+  animation: slideInFromBottom 2.8s ease-in-out forwards; /* Slide from bottom */
+}
+
+.image06 .hero-image {
+  transform: translateY(-100%);
+  animation: slideInFromTop 3.4s ease-in-out forwards; /* Slide from top */
+}
+
+/* New styles for the new elements */
+.image07 {
+  opacity: 0; /* Initially hidden */
+}
+
+.image08 {
+  opacity: 0; /* Initially hidden */
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+}
+
+.image07.visible .hero-image,
+.image08.visible .hero-logo {
+  opacity: 1; /* Fade in animation */
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-logo {
+  width: 20%; /* Resize the logo */
+  height: auto;
+  margin: 0 auto; /* Center the logo */
+  position: absolute;
+  bottom: 55%; /* Adjust this value to move the logo higher */
+}
+
+/* Keyframe Animations */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

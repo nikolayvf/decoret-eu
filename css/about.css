@@ -1,0 +1,79 @@
+/* css/about.css */
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.intro-text {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.profile {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.profile-text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.profile-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile-text a:hover {
+  text-decoration: underline;
+}
+
+.additional-section {
+  background-color: #f1f1f1;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.additional-section h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.additional-section .profile-text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}

@@ -1,0 +1,55 @@
+/* css/blog.css */
+
+.blog-container {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.blog-article-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-article-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center; /* Center the title */
+}
+
+.article-image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin-bottom: 20px;
+}
+
+.article-image {
+  width: 100%;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-content {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.article-content p {
+  margin-bottom: 15px;
+}
+
+/* Optional: Add responsive styling */
+@media (max-width: 768px) {
+  .article-image {
+    max-width: 100%; /* Make images full-width on smaller screens */
+  }
+}

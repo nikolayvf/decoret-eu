@@ -1,0 +1,36 @@
+/* css/footer.css */
+
+.footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.social-media-links a {
+  display: inline-block;
+}
+
+.social-media-links img {
+  width: 30px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: #fff;
+}
